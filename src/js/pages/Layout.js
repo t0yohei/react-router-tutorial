@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { NavLink, Link, withRouter } from "react-router-dom";
 
 class Layout extends React.Component {
   navigate() {
@@ -21,9 +21,13 @@ class Layout extends React.Component {
         <Link to="/archives?date=today&filter=hot" class="btn btn-danger">
           archives
         </Link>
-        <Link to="/settings/main" class="btn btn-success">
+        <NavLink
+          to="/settings/main"
+          className="btn btn-success"
+          activeClassName="btn-danger"
+        >
           settings
-        </Link>
+        </NavLink>
         <Link to="/settings/extra" class="btn btn-success">
           settings (extra)
         </Link>
